@@ -11,7 +11,7 @@ function App() {
         e.preventDefault(); // prevent the default link click
 
         try {
-          const response = await fetch("http://localhost:8000/api/auth/logout", {
+          const response = await fetch("https://blockchain-certificate-verification.onrender.com/api/auth/logout", {
             method: "POST",
             credentials: "include",
           });

@@ -23,7 +23,7 @@ registerForm.addEventListener("submit", async (e) => {
   const role = document.querySelector(".text-register").value;
 
   try {
-    const response = await fetch("http://localhost:8000/api/auth/register", {
+    const response = await fetch("https://blockchain-certificate-verification.onrender.com/api/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -55,7 +55,7 @@ loginForm.addEventListener("submit", async (e) => {
   // const role = document.querySelectorAll(".role-login")[1].value; // optional if role needed in login
   console.log(email , " " , password)
   try {
-    const response = await fetch("http://localhost:8000/api/auth/login", {
+    const response = await fetch("https://blockchain-certificate-verification.onrender.com/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
