@@ -32,6 +32,7 @@
                 const response = await fetch('https://blockchain-certificate-verification.onrender.com/api/protected/verify-certificate', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
                     body: JSON.stringify({ studentName, courseName, issuedYear })
                 });
 
@@ -48,7 +49,7 @@
         });
 
         document.getElementById('logoutBtn').addEventListener('click', async () => {
-            await fetch('https://blockchain-certificate-verification.onrender.com/api/auth/logout', { method: 'POST'});
+            await fetch('https://blockchain-certificate-verification.onrender.com/api/auth/logout', { method: 'POST', credentials: 'include' });
             window.location.href = "/login.html";
         });
     </script>
