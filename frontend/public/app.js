@@ -60,7 +60,6 @@ loginForm.addEventListener("submit", async (e) => {
       headers: {
         "Content-Type": "application/json"
       },
-      credentials: "include", // ⬅️ Important! To save cookie
       body: JSON.stringify({ email, password })
     });
 
